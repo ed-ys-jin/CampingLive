@@ -1,0 +1,248 @@
+:root {
+    --logo-color: #00d3ed;
+    --text-color: #333;
+    --menu-text-color: #293354;
+    --white-color: #fff;
+    --box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 15%);
+    --border-radius: 20px;
+}
+
+/***** content *****/
+.con-wrap {
+    height: auto;
+    padding: 100px 0 30px;
+}
+.inner {
+    width: 100%;
+    padding: 0 20px;
+}
+
+/*** con01 ***/
+.con01 {
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+/* con01 left */
+.con01-left {
+    margin-bottom: 2%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: 0.8s;
+}
+.con01-left .main-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    animation-name: changeBgImg;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1, end);
+}
+@keyframes changeBgImg {
+    0%,100% {background-image: url("../image/vanagon.jpg");}
+    50% {background-image: url("../image/camp.png");}
+}
+/* con01 right */
+.con01-right {
+    width: 100%;
+}
+.con01-right ul {
+    display: flex;
+}
+.app-download-ads {
+    background-color: var(--logo-color);
+    color: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;    
+    transition: 0.8s;
+}
+.app-download-ads img {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+.ad-title {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+.ad-text {
+    font-weight: 400;
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+}
+.con01-right li:nth-child(2) {
+    background-color: #293354;
+}
+.wise-saying-pc {
+    display: none;
+}
+
+/*** con02 ***/
+.con02 {
+    margin-top: 25px;
+}
+.con02 li {
+    height: auto;
+    padding: 10px 10px 20px;
+    color: var(--text-color);
+    background-color: var(--white-color);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+.con02 li img {
+    width: 100%;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+.con02 li h3 {
+    padding: 20px 5px 10px;
+}
+.con02 li p {
+    padding: 0px 5px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+
+/********** mobile : ~ 650px **********/
+@media screen and (max-width: 650px){
+    /*** con01 ***/
+    .con01-left {
+        width: 98%;
+        height: 300px;
+        padding: 0;
+    }
+    .app-download-ads {
+        width: 49%;
+        height: 125px;
+        padding: 10px;
+        margin-right: 2%;
+    }
+    .app-download-ads img {
+        width: 30px;
+        height: 30px;
+        margin-top: 7px;
+        margin-right: 10px;
+    }
+    .ad-title {
+        font-size: 17px;
+        margin: auto 0;
+    }
+    .ad-text {
+        font-size: 14px;
+        margin-top: auto;
+    }
+    
+    /*** con02 ***/
+    .con02 li {
+        margin-right: 2%;
+        margin-bottom: 2%;
+    }
+}
+
+
+/********** tablet : 651px ~ **********/
+@media screen and (min-width: 651px){
+    /*** con01 ***/
+    .con01-wrap {
+        display: flex;
+    }
+    .con01-left {
+        width: 64.64%;
+        height: 349px;
+        margin-right: 2%;
+    }
+    .con01-right {
+        width: 36.36%;
+    }
+    .con01-right ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .app-download-ads {
+        width: 100%;
+        height: 162px;
+        padding: 15px;
+        margin-bottom: 24px;
+    }
+    .app-download-ads img {
+        width: 40px;
+        height: 40px;
+        margin-top: 7px;
+        margin-right: 10px;
+    }
+    .ad-title {
+        font-size: 19px;
+        margin: auto 0;
+    }
+    .ad-text {
+        font-size: 15px;
+        margin: auto 0;
+    }
+
+    /*** con02 ***/
+    .con02 ul {
+        width: 100%;
+    }
+    .con02 li {
+        float: left;
+        width: 49%;
+    }
+    .con02-t-left {
+        margin-right: 2%;
+    }
+    .con02-t-right {
+        margin-bottom: 2%;
+    }
+}
+
+
+/********** PC : 1417px ~ **********/
+@media screen and (min-width: 1417px){
+    /***** content *****/
+    .inner {
+        width: 1300px;
+        margin: 0 auto;
+    }
+
+    /*** con01 ***/
+    .con01-left {
+        height: 326px;
+    }
+    .app-download-ads {
+        height: 150.4px;
+        padding: 20px;
+    }
+    .app-download-ads img {
+        margin-top: 7px;
+        margin-right: 10px;
+    }
+    .ad-title {
+        font-size: 19px;
+        margin: auto 0;
+    }
+    .ad-text {
+        font-size: 15px;
+        margin: auto 0;
+    }
+    .wise-saying-mob {
+        display: none;
+    }
+    .wise-saying-pc {
+        display: block;
+    }
+
+    /*** con02 ***/
+    .con02 li {
+        width: 22.85%;
+    }
+    .con02-p-left {
+        margin-right: 2.86%;
+    }
+}

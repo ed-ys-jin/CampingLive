@@ -1,0 +1,120 @@
+:root {
+    --logo-color: #00d3ed;
+    --text-color: #333;
+    --menu-text-color: #293354;
+    --info-text-color: #696969;
+    --white-color: #fff;
+    --table-border-color: rgba(211, 211, 211, 0.5);
+    --box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 15%);
+    --border-radius: 20px;
+}
+
+.ci-con-wrap {
+    width: 100%;
+    padding: 90px 0 0;
+}
+
+.ci-inner {
+    width: 100%;
+    padding: 40px 20px;
+}
+
+/***** con01 *****/
+.ci-con01 {
+    width: 100%;
+    margin-bottom: 2%;
+}
+.ci-firstImg {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+.ci-firstImg img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    
+}
+.ci-mainInfo {
+    padding: 5px 0 15px;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -1px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+.ci-mainInfo table, .ci-detailInfo table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.ci-mainInfo tr, .ci-detailInfo tr {
+    border-bottom: 1px solid var(--table-border-color);
+}
+.ci-mainInfo th, .ci-detailInfo th {
+    width: 30%;
+    padding: 11px 15px;
+    font-weight: 400;
+    text-align: left;
+}
+.ci-mainInfo td, .ci-detailInfo td {
+    padding: 11px 10px;
+    color: var(--info-text-color);
+    font-weight: 400;
+}
+
+
+/***** con02 *****/
+.ci-con02 {
+    width: 100%;
+}
+.ci-intro-text, .ci-notice {
+    padding: 11px 15px;
+    margin-bottom: 2%;
+    font-size: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+.ci-detailInfo {
+    padding: 11px 0;
+    margin-bottom: 2%;
+    font-size: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+.ci-intro-text h3, .ci-notice h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.ci-detailInfo h3 {
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+.ci-intro-text p, .ci-notice p {
+    padding: 11px 0px;
+    font-weight: 400;
+    color: var(--info-text-color);
+}
+.ci-notice span {
+    color: coral;
+}
+
+
+/********** 1000px ~ **********/
+@media screen and (min-width: 1000px){
+    .ci-con01 {
+        display: grid;
+        grid-template-columns: 6fr 4fr;
+        gap: 20px;
+    }
+}
+
+
+/********** 1280px ~ **********/
+@media screen and (min-width: 1280px){
+    .ci-inner {
+        width: 1280px;
+        margin: 0 auto;
+    }
+}

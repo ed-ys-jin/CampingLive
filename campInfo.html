@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/campInfo.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>캠핑장 정보</title>
+</head>
+<body>
+    <div class="header">
+        <div class="s-menu">
+            <button type="button" class="s-menu-closeBtn">
+                <img src="image/close.png" alt="">
+            </button>
+            <ul class="s-menu-bar">
+                <li><a href="login.html"><span>LOG-IN</span></a></li>
+                <li><a href="theme.html"><span>캠핑테마</span></a></li>
+                <li class="no-service"><a href="#"><span>캠핑지도</span></a></li>
+                <li class="member-only"><a href="#"><span>다이어리</span></a></li>
+                <li><a href="https://campinglive.kr/" target="_blank"><span>앱다운로드</span></a></li>
+            </ul>
+        </div>
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="image/logo.png" alt="LOGO">
+                <span>캠핑라이브</span>
+            </a>
+        </h1>
+        <div class="menu-wrap">
+            <ul class="m-menu">
+                <li><a href="theme.html"><span>캠핑테마</span></a></li>
+                <li class="no-service"><a href="#"><span>캠핑지도</span></a></li>
+                <li class="member-only"><a href="#"><span>다이어리</span></a></li>
+                <li><a href="https://campinglive.kr/" target="_blank"><span>앱다운로드</span></a></li>
+            </ul>
+            <div class="m-login">
+                <a href="login.html">
+                    <img src="image/login.png" alt="">
+                </a>
+            </div>
+            <div class="s-menu-openBtn">
+                <ul class="s-menu-openIcon">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="ci-con-wrap">
+        <div class="ci-inner">
+            <div class="ci-con01">
+                <div class="ci-firstImg">
+                    <img id="firstImageUrl" alt="">
+                </div>
+                <div class="ci-mainInfo">
+                    <table>
+                        <tr>
+                            <th>
+                                캠핑장명
+                            </th>
+                            <td id="facltNm"></td>
+                        </tr>
+                        <tr>
+                            <th>
+                                문의처
+                            </th>
+                            <td id="tel"></td>
+                        </tr>
+                        <tr>
+                            <th>주소</th>
+                            <td id="addr1"></td>
+                        </tr>
+                        <tr>
+                            <th>캠핑장 환경</th>
+                            <td id="lctCl"></td>
+                        </tr>
+                        <tr>
+                            <th>캠핑장 유형</th>
+                            <td id="induty"></td>
+                        </tr>
+                        <tr>
+                            <th>운영기간</th>
+                            <td id="operPdCl"></td>
+                        </tr>
+                        <tr>
+                            <th>운영일</th>
+                            <td id="operDeCl"></td>
+                        </tr>
+                        <tr>
+                            <th>홈페이지</th>
+                            <td><a id="homepage" target="_blank"></a></td>
+                        </tr>
+                        <tr>
+                            <th>예약방법</th>
+                            <td id="resveCl"></td>
+                        </tr>
+                        <tr>
+                            <th>주변이용가능시설</th>
+                            <td id="posblFcltyCl"></td>
+                        </tr>
+                        <tr>
+                            <th>부대시설</th>
+                            <td id="sbrsCl"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="ci-con02">
+                <div class="ci-detail">
+                    <div class="ci-intro-text">
+                        <h3>캠핑장 소개</h3>
+                        <p id="intro"></p>
+                    </div>
+                    <div class="ci-detailInfo">
+                        <h3>캠핑장 정보</h3>
+                        <table>
+                            <tr>
+                                <th>반려동물 동반여부
+                                    <td id="animalCmgCl"></td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>화로대 사용여부</th>
+                                <td id="brazierCl"></td>
+                            </tr>
+                            <tr>
+                                <th>개인트레일러 동반여부</th>
+                                <td id="trlerAcmpnyAt"></td>
+                            </tr>
+                            <tr>
+                                <th>개인카라반 동반여부</th>
+                                <td id="caravAcmpnyAt"></td>
+                            </tr>
+                            <tr>
+                                <th>주요시설</th>
+                                <td id="gnrlSiteCo"></td>
+                            </tr>
+                            <tr>
+                                <th>편의시설</th>
+                                <td id="toiletCo"></td>
+                            </tr>
+                            <tr>
+                                <th>사이트규격별 수량</th>
+                                <td id="siteMg1Co"></td>
+                            </tr>
+                            <tr>
+                                <th>사이트바닥별 수량</th>
+                                <td id="siteBottomCl1"></td>
+                            </tr>
+                            <tr>
+                                <th>안전시설</th>
+                                <td id="extshrCo"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="ci-notice">
+                        <h3>안내문</h3>
+                        <p>캠핑라이브에 등록된 정보는 현장상황과 다소 다를 수 있으니 <span>반려동물 동반 여부,부가시설물,추가차량</span> 등 원활한 캠핑을 위해 꼭 필요한 사항은 해당 캠핑장에 미리 확인하시기 바랍니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="js/header.js"></script>
+    <script src="js/campInfo.js"></script>
+</body>
+</html>

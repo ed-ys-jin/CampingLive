@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 네이버 지도 -->
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=fq5h763a1u&callback=initMap"></script>
+    <!-- 구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>캠핑테마</title>
+</head>
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="s-menu">
+            <button type="button" class="s-menu-closeBtn">
+                <img src="image/close.png" alt="">
+            </button>
+            <ul class="s-menu-bar">
+                <li><a href="login.html"><span>LOG-IN</span></a></li>
+                <li><a href="theme.html"><span>캠핑테마</span></a></li>
+                <li class="no-service"><a href="#"><span>캠핑지도</span></a></li>
+                <li class="member-only"><a href="#"><span>다이어리</span></a></li>
+                <li><a href="https://campinglive.kr/" target="_blank"><span>앱다운로드</span></a></li>
+            </ul>
+        </div>
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="image/logo.png" alt="LOGO">
+                <span>캠핑라이브</span>
+            </a>
+        </h1>
+        <div class="menu-wrap">
+            <ul class="m-menu">
+                <li><a href="theme.html"><span>캠핑테마</span></a></li>
+                <li class="no-service"><a href="#"><span>캠핑지도</span></a></li>
+                <li class="member-only"><a href="#"><span>다이어리</span></a></li>
+                <li><a href="https://campinglive.kr/" target="_blank"><span>앱다운로드</span></a></li>
+            </ul>
+            <div class="m-login">
+                <a href="login.html">
+                    <img src="image/login.png" alt="">
+                </a>
+            </div>
+            <div class="s-menu-openBtn">
+                <ul class="s-menu-openIcon">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- contents -->
+    <div class="tm-con-wrap">
+        <!-- dropdown menu -->
+        <div class="tm-dropdown">
+            <button class="tm-dropbtn">
+                캠핑테마
+            </button>
+            <div class="tm-dropdown-content">
+              <a href="#" class="dropdown-btn" name="pat">댕댕이와</a>
+              <a href="#" class="dropdown-btn" name="trail">산책로</a>
+              <a href="#" class="dropdown-btn" name="fishing">낚시</a>
+              <a href="#" class="dropdown-btn" name="wifi">무선인터넷</a>
+            </div>
+        </div>
+        <div class="tm-inner">
+            <!-- camp list -->
+            <div class="tm-con01">
+                <ul class="tm-camp-list">
+                </ul>
+            </div>
+            <!-- map -->
+            <div id="map"></div>
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="js/header.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

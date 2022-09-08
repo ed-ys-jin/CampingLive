@@ -1,0 +1,131 @@
+:root {
+  --logo-color: #00d3ed;
+  --text-color: #333;
+  --menu-text-color: #293354;
+  --white-color: #fff;
+  --login-text-color: #a6a6a6;
+  --login-line-color: #adadad;
+  --singup-text-color: #2691d9;
+  --en-font-family: "Poppins", 'Apple SD Gothic Neo', sans-serif;
+  --box-shadow: 8px 2px 62px 0px rgb(34 51 89 / 15%);
+  --border-radius: 20px;
+}
+
+/* frame */
+.li-center {
+  font-family: var(--en-font-family);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+.li-center h1 {
+  text-align: center;
+  color: var(--menu-text-color);
+  padding: 20px 0;
+  border-bottom: 1px solid silver;
+}
+.li-center form {
+  padding: 0 40px;
+}
+/* text field : name + password */
+.li-txt-field {
+  position: relative;
+  display: flex;
+  border-bottom: 2px solid var(--login-line-color);
+  margin: 30px 0;
+}
+.li-txt-field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.li-txt-field input::placeholder {
+  font-family: var(--en-font-family);
+  color: var(--login-text-color);
+}
+/* question mark : tooltip */
+.tooltip {
+  margin: auto 0 0px auto;
+  display: inline-block;
+}
+.li-txt-field img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.tooltip-text {
+  display: none;
+  position: absolute;
+  width: auto;
+  right: 0px;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 0.8em;
+  color: white;
+  background: var(--login-text-color);
+}
+.tooltip:hover .tooltip-text {
+  display: block;
+}
+/* remember me */
+input[type="checkbox"] {
+  margin: 0 0 30px 5px;
+}
+input[type="checkbox"] + label {
+  color: var(--login-text-color);
+}
+input[type="checkbox"]:checked + label {
+  color: var(--text-color);
+}
+/* login button */
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  border: 2px solid;
+  background: var(--logo-color);
+  border-radius: 25px;
+  font-size: 18px;
+  color: var(--white-color);
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+input[type="submit"]:hover {
+  border-color: var(--logo-color);
+  transition: .5s;
+}
+/* forget password */
+.forget {
+  margin: 20px 0;
+  color: var(--login-text-color);
+  text-align: center;
+  cursor: pointer;
+}
+.forget:hover {
+  color: var(--logo-color);
+  text-decoration: underline;
+}
+/* signup */
+.signup {
+  margin: 0 0 30px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--login-text-color);
+}
+.signup a {
+  color: var(--singup-text-color);
+  text-decoration: none;
+}
+.signup a:hover {
+  text-decoration: underline;
+}
