@@ -9,7 +9,7 @@ let pageCounter = 1;
 if(localStorage.getItem("themeName") != null){
     let getThemeName = localStorage.getItem("themeName");
     themeTitle = JSON.parse(getThemeName);
-    localStorage.removeItem("themeName");
+    localStorage.rem(oveItem("themeName");
     switch(themeTitle){
         case "pat":
             $(".tm-dropbtn").text("댕댕이와");  
@@ -28,7 +28,7 @@ if(localStorage.getItem("themeName") != null){
 
 /***** get data from GOCAMP API *****/
 function getData(){
-    let api_key = "Q%2Bc5GeE%2F9BuTlbuPQO%2Bm980f8VlaP7oLiYAkCA%2FjpCTG2QQD2rtnKVtVT87k%2BjVM%2BSul0h%2F66QHqrjNX%2Fh%2BZFA%3D%3D";
+    let api_key = "D7xN8zqJPXKCBRxg3z1aE1lTVR5xQS%2FM43iNgCCo%2BweFVFgviBFz%2FjMngcV4FZ8dnmkmkXWs5sVQ7GPXm9JcWA%3D%3D";
             
     // JSON
     const requestURL = `http://apis.data.go.kr/B551011/GoCamping/basedList?serviceKey=${api_key}&numOfRows=10&pageNo=${pageCounter}&MobileOS=ETC&MobileApp=AppTest&_type=json`;
