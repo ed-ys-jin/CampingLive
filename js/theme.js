@@ -9,7 +9,7 @@ let pageCounter = 1;
 if(localStorage.getItem("themeName") != null){
     let getThemeName = localStorage.getItem("themeName");
     themeTitle = JSON.parse(getThemeName);
-    localStorage.rem(oveItem("themeName");
+    localStorage.removeItem("themeName");
     switch(themeTitle){
         case "pat":
             $(".tm-dropbtn").text("댕댕이와");  
